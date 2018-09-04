@@ -1,0 +1,43 @@
+@font-face{
+    src: url(fonts/selima_.otf);
+    font-family: selima;
+}
+header{
+    text-align: center;
+}
+h1{
+    font-family: selima;
+    color: gray;
+    font-size: 3em;
+    padding: 24px 0px;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+h3{
+    font-family: selima;
+    color: black;
+    font-size: 2em;
+}
+.board{
+    width: 740px;
+    height: 555px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.card img{
+ width: 175px;
+ height: 175px;
+}
+.card{
+    background-color: black;
+}
+.frontimage{
+    display: block;
+}
+.backimage{
+    display: none;
+}
