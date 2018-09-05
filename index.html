@@ -7,7 +7,7 @@
     <title>Memory Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="javascript" type="text/javascript" href="myScript.js">
+    <script src="myScript.js"></script>
 </head>
 
 <body>
@@ -15,16 +15,16 @@
         <h1>Sweet Desserts Collection</h1>
     </header>
     <main>
-        <section class="board" >
-            <div class="card" value="1">
-                <div class="frontimage" >
+        <section class="board">
+            <div class="card" id="cake" onclick="flipTile(this,1)">
+                <div class="frontimage" id="cake_1">
                     <img src="images/frontimage.jpg">
                 </div>
-                <div class="backimage">
+                <div class="backimage" id="cake_2">
                     <img src="images/cake.png">
                 </div>
             </div>
-            <div class="card" value="2">
+            <div class="card" id="choclate_1" onclick="flipTile(this,2)">
                 <div class="frontimage">
                     <img src="images/frontimage.jpg">
                 </div>
@@ -32,7 +32,7 @@
                     <img src="images/choclate.png">
                 </div>
             </div>
-            <div class="card" value="3">
+            <div class="card" id="chocochip_1" onclick="flipTile(this,3)">
                 <div class="frontimage">
                     <img src="images/frontimage.jpg">
                 </div>
@@ -40,7 +40,7 @@
                     <img src="images/chocochip.png">
                 </div>
             </div>
-            <div class="card" value="5">
+            <div class="card" id="chocoroll_1" onclick="flipTile(this,4)">
                 <div class="frontimage">
                     <img src="images/frontimage.jpg">
                 </div>
@@ -48,7 +48,7 @@
                     <img src="images/chocoroll.png">
                 </div>
             </div>
-            <div class="card" value="6">
+            <div class="card" id="cupcake_1" onclick="flipTile(this,5)">
                 <div class="frontimage">
                     <img src="images/frontimage.jpg">
                 </div>
@@ -56,7 +56,7 @@
                     <img src="images/cupcake.png">
                 </div>
             </div>
-            <div class="card" value="4">
+            <div class="card" id="donut_1" onclick="flipTile(this,6)">
                 <div class="frontimage">
                     <img src="images/frontimage.jpg">
                 </div>
@@ -64,7 +64,7 @@
                     <img src="images/donut.png">
                 </div>
             </div>
-            <div class="card" value="1">
+            <div class="card" id="cake_2" onclick="flipTile(this,1)">
                     <div class="frontimage">
                         <img src="images/frontimage.jpg">
                     </div>
@@ -72,7 +72,7 @@
                         <img src="images/cake.png">
                     </div>
                 </div>
-                <div class="card" value="2">
+                <div class="card" id="choclate_1" onclick="flipTile(this,2)">
                     <div class="frontimage">
                         <img src="images/frontimage.jpg">
                     </div>
@@ -80,7 +80,7 @@
                         <img src="images/choclate.png">
                     </div>
                 </div>
-                <div class="card" value="3">
+                <div class="card" id="chocochip_1" onclick="flipTile(this,3)">
                     <div class="frontimage">
                         <img src="images/frontimage.jpg">
                     </div>
@@ -88,7 +88,7 @@
                         <img src="images/chocochip.png">
                     </div>
                 </div>
-                <div class="card" value="5">
+                <div class="card" id="chocoroll_1" onclick="flipTile(this,4)">
                     <div class="frontimage">
                         <img src="images/frontimage.jpg">
                     </div>
@@ -96,7 +96,7 @@
                         <img src="images/chocoroll.png">
                     </div>
                 </div>
-                <div class="card" value="6">
+                <div class="card" id="cupcake_1" onclick="flipTile(this,5)">
                     <div class="frontimage">
                         <img src="images/frontimage.jpg">
                     </div>
@@ -104,7 +104,7 @@
                         <img src="images/cupcake.png">
                     </div>
                 </div>
-                <div class="card" value="4">
+                <div class="card" id="donut_1" onclick="flipTile(this,6)">
                     <div class="frontimage">
                         <img src="images/frontimage.jpg">
                     </div>

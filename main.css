@@ -20,6 +20,7 @@ h3{
     color: black;
     font-size: 2em;
 }
+
 .board{
     width: 740px;
     height: 555px;
@@ -27,17 +28,20 @@ h3{
     justify-content: space-between;
     flex-wrap: wrap;
     margin: auto;
-}
-.card img{
- width: 175px;
- height: 175px;
+    align-items: center;
 }
 .card{
-    background-color: black;
+    border:2px solid aqua;
 }
+.frontimage img{
+ width: 175px;
+ height: 170px;
+}
+
 .frontimage{
     display: block;
 }
 .backimage{
-    display: none;
+    display: none ;
 }
+
