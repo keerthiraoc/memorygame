@@ -1,47 +1,75 @@
-@font-face{
+@font-face {
     src: url(fonts/selima_.otf);
     font-family: selima;
 }
-header{
+
+header {
     text-align: center;
 }
-h1{
+
+h1 {
     font-family: selima;
     color: gray;
     font-size: 3em;
     padding: 24px 0px;
 }
-footer{
+
+footer {
     display: flex;
     justify-content: space-evenly;
 }
-h3{
+
+h3 {
     font-family: selima;
     color: black;
     font-size: 2em;
 }
 
-.board{
-    width: 740px;
-    height: 555px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.board {
+    width: 640px;
+    height: 640px;
     margin: auto;
-    align-items: center;
-}
-.card{
-    border:2px solid aqua;
-}
-.frontimage img{
- width: 175px;
- height: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
 }
 
-.frontimage{
-    display: block;
-}
-.backimage{
-    display: none ;
+.card {
+    border: 2px solid aqua;
+    width: 25%;
+    /* height: 33.33%; */
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+.card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+    transition: transform .2s;
+}
+
+.frontimage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.backimage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.backimage {
+    transform: rotateY(180deg);
+}

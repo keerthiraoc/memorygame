@@ -1,31 +1,34 @@
 var flipped=0,flip=0;
 var x,y;
-var a,b,c,d;
+var a=0,b=0,firstCard,secondCard;
 function flipTile(tile,val)
 {
-    // "tile+1".style.display="none";
-    // "tile+2".style.display="block";
+    tile.classList.add('flip');
     if(flipped<2)
     {
         if(flipped==0)
         {
         a=val;
-        c=tile;
+        firstCard=tile;
         flipped++;
         }
         else if(flipped==1)
         {
         b=val;
-        d=tile;
+        secondCard=tile;
         flipped=0;
         }
-        if(a==b)
+        if(a===b)
         {
-            c.style.display="none";
-            d.style.display="none";
+            secondCard.onclick=null;
+            firstCard.onclick = null;
+            a=0;b=0;
         }
-        else if(a!=b)
+        else if(a!==b && b!=0)
         {
+            firstCard.classList.remove('flip');
+            secondCard.classList.remove('flip');
+            a=0;b=0;
         }
     }
 }
