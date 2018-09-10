@@ -16,67 +16,72 @@
     </header>
     <main>
         <section class="board">
-            <div class="card" id="cake_1" onclick="flipTile(this,1)">
+            <div class="card" id="block1" onclick="flipTile(this,1)">
                 <img class="frontimage"src="images/frontimage.jpg">
                 <img class="backimage" src="images/cake.png">
             </div>
-            <div class="card" id="choclate_1" onclick="flipTile(this,2)">
+            <div class="card" id="block2" onclick="flipTile(this,2)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/choclate.png">
             </div>
-            <div class="card" id="chocochip_1" onclick="flipTile(this,3)">
+            <div class="card" id="block3" onclick="flipTile(this,3)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/chocochip.png">
             </div>
-            <div class="card" id="chocoroll_1" onclick="flipTile(this,4)">
+            <div class="card" id="block4" onclick="flipTile(this,4)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/chocoroll.png">
             </div>
-            <div class="card" id="cupcake_1" onclick="flipTile(this,5)">
+            <div class="card" id="block5" onclick="flipTile(this,5)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/cupcake.png">
             </div>
-            <div class="card" id="donut_1" onclick="flipTile(this,6)">
+            <div class="card" id="block6" onclick="flipTile(this,6)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/donut.png">
             </div>
-            <div class="card" id="cake_2" onclick="flipTile(this,1)">
+            <div class="card" id="block7" onclick="flipTile(this,1)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/cake.png">
             </div>
-            <div class="card" id="choclate_1" onclick="flipTile(this,2)">
+            <div class="card" id="block8" onclick="flipTile(this,2)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/choclate.png">
             </div>
-            <div class="card" id="chocochip_1" onclick="flipTile(this,3)">
+            <div class="card" id="block9" onclick="flipTile(this,3)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/chocochip.png">
             </div>
-            <div class="card" id="chocoroll_1" onclick="flipTile(this,4)">
+            <div class="card" id="block10" onclick="flipTile(this,4)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/chocoroll.png">
             </div>
-            <div class="card" id="cupcake_1" onclick="flipTile(this,5)">
+            <div class="card" id="block11" onclick="flipTile(this,5)">
                 <img class="frontimage" src="images/frontimage.jpg">
                  <img class="backimage" src="images/cupcake.png">
             </div>
-            <div class="card" id="donut_1" onclick="flipTile(this,6)">
+            <div class="card" id="block12" onclick="flipTile(this,6)">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/donut.png">
             </div>
         </section>
     </main>
     <footer>
-        <div class="time">
-            <h3>Time:</h3>
+        <div class="time" id="time">
+            <h3>Time:<span class="clock data"> 0:00</span></h3>
         </div>
-        <div class="rating">
+        <!-- <div class="rating" id="rating">
             <h3>Star rating</h3>
-        </div>
-        <div class="moves">
-            <h3>Moves:</h3>
+        </div> -->
+        <div class="moves" id="moves">
+            <h3>Moves:<span id="counter">0</span></span></h3>
         </div>
     </footer>
 </body>
-
+<script>
+for(i=1;i<12;i++)
+{
+    document.getElementById('block'+i).style.order=Math.floor((Math.random()*12)+1);
+}
+</script>
 </html>

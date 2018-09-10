@@ -11,7 +11,7 @@ h1 {
     font-family: selima;
     color: gray;
     font-size: 3em;
-    padding: 24px 0px;
+    /* padding: 20px 0px; */
 }
 
 footer {
@@ -27,7 +27,7 @@ h3 {
 
 .board {
     width: 640px;
-    height: 640px;
+    height: 465px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -36,9 +36,9 @@ h3 {
 
 .card {
     border: 2px solid aqua;
-    width: 25%;
-    /* height: 33.33%; */
-    margin: 5px;
+    width: 155px;
+    height: 155px;
+    /* margin: 5px; */
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;

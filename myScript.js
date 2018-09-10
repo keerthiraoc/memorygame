@@ -1,8 +1,10 @@
-var flipped=0,flip=0;
-var x,y;
+var match=0;
+var flipped=0,flips=0;
 var a=0,b=0,firstCard,secondCard;
 function flipTile(tile,val)
 {
+    flips++;
+    // ("#counter").text(flips);
     tile.classList.add('flip');
     if(flipped<2)
     {
@@ -23,6 +25,7 @@ function flipTile(tile,val)
             secondCard.onclick=null;
             firstCard.onclick = null;
             a=0;b=0;
+            match++;
         }
         else if(a!==b && b!=0)
         {
@@ -30,5 +33,6 @@ function flipTile(tile,val)
             secondCard.classList.remove('flip');
             a=0;b=0;
         }
+        setTimeout(flipTile,2000);
     }
 }
