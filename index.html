@@ -7,81 +7,76 @@
     <title>Memory Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="myScript.js"></script>
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <h1>Sweet Desserts Collection</h1>
-    </header>
+    </header> -->
     <main>
-        <section class="board">
-            <div class="card" id="block1" onclick="flipTile(this,1)">
-                <img class="frontimage"src="images/frontimage.jpg">
+        <section class="memory-game">
+            <div class="memory-card" data-framework="cake">
+                <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/cake.png">
             </div>
-            <div class="card" id="block2" onclick="flipTile(this,2)">
+            <div class="memory-card" data-framework="choclate">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/choclate.png">
             </div>
-            <div class="card" id="block3" onclick="flipTile(this,3)">
+            <div class="memory-card" data-framework="chocochip">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/chocochip.png">
             </div>
-            <div class="card" id="block4" onclick="flipTile(this,4)">
+            <div class="memory-card" data-framework="chocoroll">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/chocoroll.png">
             </div>
-            <div class="card" id="block5" onclick="flipTile(this,5)">
+            <div class="memory-card" data-framework="cupcake">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/cupcake.png">
             </div>
-            <div class="card" id="block6" onclick="flipTile(this,6)">
+            <div class="memory-card" data-framework="donut">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/donut.png">
             </div>
-            <div class="card" id="block7" onclick="flipTile(this,1)">
+            <div class="memory-card" data-framework="cake">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/cake.png">
             </div>
-            <div class="card" id="block8" onclick="flipTile(this,2)">
+            <div class="memory-card" data-framework="choclate">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/choclate.png">
             </div>
-            <div class="card" id="block9" onclick="flipTile(this,3)">
+            <div class="memory-card" data-framework="chocochip">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/chocochip.png">
             </div>
-            <div class="card" id="block10" onclick="flipTile(this,4)">
+            <div class="memory-card" data-framework="chocoroll">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/chocoroll.png">
             </div>
-            <div class="card" id="block11" onclick="flipTile(this,5)">
+            <div class="memory-card" data-framework="cupcake">
                 <img class="frontimage" src="images/frontimage.jpg">
-                 <img class="backimage" src="images/cupcake.png">
+                <img class="backimage" src="images/cupcake.png">
             </div>
-            <div class="card" id="block12" onclick="flipTile(this,6)">
+            <div class="memory-card" data-framework="donut">
                 <img class="frontimage" src="images/frontimage.jpg">
                 <img class="backimage" src="images/donut.png">
             </div>
         </section>
+        <script src="./myScript.js"></script>
     </main>
-    <footer>
+    <!-- <footer>
         <div class="time" id="time">
             <h3>Time:<span class="clock data"> 0:00</span></h3>
         </div>
-        <!-- <div class="rating" id="rating">
-            <h3>Star rating</h3>
-        </div> -->
+        <div class="rating" id="rating">
+                <h3>Star rating</h3>
+            </div>
         <div class="moves" id="moves">
             <h3>Moves:<span id="counter">0</span></span></h3>
         </div>
-    </footer>
+    </footer> -->
 </body>
-<script>
-for(i=1;i<12;i++)
-{
-    document.getElementById('block'+i).style.order=Math.floor((Math.random()*12)+1);
-}
-</script>
+
 </html>

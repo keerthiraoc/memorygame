@@ -1,38 +1,58 @@
-var match=0;
-var flipped=0,flips=0;
-var a=0,b=0,firstCard,secondCard;
-function flipTile(tile,val)
-{
-    flips++;
-    // ("#counter").text(flips);
-    tile.classList.add('flip');
-    if(flipped<2)
-    {
-        if(flipped==0)
-        {
-        a=val;
-        firstCard=tile;
-        flipped++;
-        }
-        else if(flipped==1)
-        {
-        b=val;
-        secondCard=tile;
-        flipped=0;
-        }
-        if(a===b)
-        {
-            secondCard.onclick=null;
-            firstCard.onclick = null;
-            a=0;b=0;
-            match++;
-        }
-        else if(a!==b && b!=0)
-        {
-            firstCard.classList.remove('flip');
-            secondCard.classList.remove('flip');
-            a=0;b=0;
-        }
-        setTimeout(flipTile,2000);
+const cards = document.querySelectorAll('.memory-card');
+
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+    if (lockBoard) return;
+    if (this === firstCard) return;
+
+    this.classList.add('flip');
+
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+        return;
     }
+
+    secondCard = this;
+    lockBoard = true;
+
+    checkForMatch();
 }
+
+function checkForMatch() {
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+    isMatch ? disableCards() : unflipCards();
+}
+
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+
+    resetBoard();
+}
+
+function unflipCards() {
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+
+        resetBoard();
+    }, 800);
+}
+
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+    cards.forEach(card => {
+        let ramdomPos = Math.floor(Math.random() * 12);
+        card.style.order = ramdomPos;
+    });
+})();
+
+cards.forEach(card => card.addEventListener('click', flipCard));
